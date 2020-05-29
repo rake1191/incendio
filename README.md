@@ -41,7 +41,7 @@ app = Flask(__name__)
   
 @app.route("/") #deault route
 def home_view(): 
-        return "<h1>Welcome to Geeks for Geeks</h1>" #we can replace this return statement with html templates
+        return "<h1>Hello Handsome :)</h1>" #we can replace this return statement with html templates
 
 if __name__ == "__main__": #App instantiation
         app.run() 
