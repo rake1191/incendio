@@ -23,9 +23,8 @@ python-3.7.5
 ```
 
 ProcFile - commands in this file will be executed to start the app
-runtime.txt - we are telling heroku which version of python we will be using
 
-Foobar is a Python library for dealing with word pluralization.
+runtime.txt - we are telling heroku which version of python we will be using
 
 ## create a webApp
 
