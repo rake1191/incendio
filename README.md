@@ -15,27 +15,25 @@ pipenv install flask gunicorn
 create two files. and add below codes
 * ProcFile
 ```
-web: gunicorn wsgi:app
+web: gunicorn mainapp:app
 ```
 * runtime.txt 
 ```
 python-3.7.5
 ```
 
-ProcFile - commands in this file will be executed to start the app
+ProcFile - command in this file will be executed to start the web app. 
 
 runtime.txt - we are telling heroku which version of python we will be using
 
 ## create a webApp
 
-create a folder called "App" and enter it(mkdir app && cd app)
-
-create a file - main.py and enter flask boiler template code.
+create a file - mainapp.py and enter flask boiler template code.
 Flask is a lightweight WSGI web application framework. It is designed to create webapps quick and easy.
 
 
 ```python
-#main.py
+#mainapp.py
 
 from flask import Flask 
   
@@ -44,16 +42,8 @@ app = Flask(__name__)
 @app.route("/") #deault route
 def home_view(): 
         return "<h1>Welcome to Geeks for Geeks</h1>" #we can replace this return statement with html templates
-```
 
-go to root directory of the project and create a new file - wsgi.py
-
-```python
-#wsgi.py
-
-from app.main import app 
-  
-if __name__ == "__main__": 
+if __name__ == "__main__": #App instantiation
         app.run() 
 ```
 
